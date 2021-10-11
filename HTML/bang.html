@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Drop Down Navigation Menu | CodingLab</title>
+    <link rel="stylesheet" href="CSS/table.css" />
+    <link rel="stylesheet" href="CSS/responsivetable.css" />
+
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="Javascripts/bang.js"></script>
+    <!-- Boxicons CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <i class='bx bx-menu'></i>
+        <div class="logo"><a href="#">LOGO</a></div>
+        <div class="nav-links">
+          <div class="sidebar-logo">
+            <span class="logo-name">LOGO</span>
+            <i class='bx bx-x' ></i>
+          </div>
+          <ul class="links"> 
+            <li><i class="bx bx-home user"></i>
+              <a href="#">Tổng Quan</a></li>
+            <li>
+              <i class='bx bx-list-plus user'></i>
+              <a href="#">Nhân Viên</a>
+              <i class='bx bxs-chevron-down nv-arrow arrow '></i>
+              <ul class="nhanvien-sub-menu sub-menu">
+                <li>
+                  <i class='bx bx-alarm-add user'></i><a href="#">Chấm Công</a>
+                </li>
+                <li>
+                  <i class="bx bx-detail user"></i><a href="#">Chức Vụ</a>
+                </li>
+                <li>
+                  <i class="bx bx-detail user"></i></i><a href="#">Đào Tạo</a>
+                </li>      
+              </ul>
+            </li>
+            <li>
+              <i class="bx bx-detail user"></i></i
+              ><a href="#">Quản Lý Dự Án</a>
+            </li>
+            <li>
+              <i class="bx bxs-report user"></i>
+              <a href="#">Sự Kiện & Cuộc Họp</a>
+            </li>
+            <li>
+              <i class="bx bx-coin-stack user"></i>
+              <a href="#">Tài Chính</a>
+            </li>
+            
+            <li>
+              <i class="bx bxs-report user"></i>
+              <a href="#">Báo Cáo</a>
+              <i class='bx bxs-chevron-down bc-arrow arrow '></i>
+              <ul class="baocao-sub-menu sub-menu">
+                <li>
+                  <i class="bx bxs-report user"></i>
+                  <a href="#">Báo cáo Tài Chính</a>
+                </li>
+                <li>
+                  <i class="bx bxs-report user"></i>
+                  <a href="#">Báo cáo Dự Án</a>
+                </li>
+                <li>
+                  <i class="bx bxs-report user"></i>
+                  <a href="#">Báo cáo Nhân Sự</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i class="bx bx-user user"></i>
+              <a href="#">Tài Khoản</a>
+              <i class='bx bxs-chevron-down tk-arrow arrow '></i>
+              <ul class="taikhoan-sub-menu sub-menu">
+                <li>
+                  <i class='bx bx-notification user'></i><a href="#">Thông Báo</a>
+                </li>
+                <li><i class='bx bx-log-out-circle user' ></i><a href="#">Đăng Xuất</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script src="Javascripts/Menu.js"></script>
+    <div class="container-fluid al">
+      <Br>
+      <p class="timkiemnhanvien"><b>TÌM KIẾM NHÂN VIÊN:</b></p><br>
+      <input type="text" id="search"  placeholder="Nhập tên nhân viên cần tìm..." title="Tìm Kiếm Nhân Viên"><i class='bx bx-search user' ></i>
+  
+      <form action="">
+      </form>
+      <br>
+      <b>CHỨC NĂNG CHÍNH:</b><Br>
+      <button class="nv btn add-new" type="button"  value = "Add" onclick="showForm()"
+          title="Thêm Nhân Viên"><i class='bx bxs-message-square-add user' ></i></button>
+      <button class="nv" type="button" onclick="sortTable()" title="Lọc Dữ Liệu"><i class='bx bx-filter-alt user' ></i></button>
+      <button class="nv xuat" title="Xuất File"><i class='bx bxs-file-import user' ></i></i></button>
+      <div class="table-title">
+          <div class="row">
+  
+          </div>
+      </div>
+
+      <div id="listingTable">
+
+        
+      </div>
+      
+      
+      <div id="data">
+        <form id="formElement" style="display: none;">
+            <br>
+            <label for="name">Tên Nhân Viên</label>
+            <input id="name" name="name" type="text" placeholder="Nhập họ và tên...."> 
+            <br>
+            <label for="gender">Giới tính</label>
+            <select id="gender" name="gender">
+              <option>Nam</option>
+              <option>Nữ</option>
+            </select>
+            <label for="birthday"></label>Ngày Sinh</label>
+            <br></br>
+            <input id="age" name="age" type="date">
+            <br></br>
+            <label for="number">Số Điện Thoại</label>
+            <input id="number" name="number" type="text" placeholder="Nhập số điện thoại..">
+            <label for="andress">Địa Chỉ</label>
+            <input id="andress" name="andress" type="text" placeholder="Nhập địa chỉ..">
+            <label for="job">Chức Vụ</label>
+            <input id="job" name="job" type="text" placeholder="Nhập chức vụ..">
+            <input class="button" type="button" value=" Add " onclick="AddData()">
+        </form>
+        </div>  
+    </div>
+    <br>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th scope="col" id = "name" name = "name">Tên Nhân Viên</th>
+          <th scope="col" id = "gender" name = "gender">Giới Tính</th>
+          <th scope="col" id = "birthday" name = "birthday">Ngày Sinh</th>
+          <th scope="col" id = "number" name = "number">Số Điện Thoại</th>
+          <th scope="col" id = "andress" name = "andress">Địa Chỉ</th>
+          <th scope="col" id = "job" name = "job">Chức Vụ</th>
+          <th scope="col" id = "icon" name = "icon" width="5px; !important">Tính Năng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nguyễn Đăng Khoa</td>
+                <td>Nam</td>
+                <td>16/09/2001</td>
+                <td>09330000</td>
+                <td>Hồ Chí Minh</td>
+                <td>Giám Đốc</td>
+          <td id="icon-xoa">
+              <a class="edit" title="Sửa" data-toggle="tooltip"><i class='bx bx-pencil user'></i></a>
+              <a class="delete" title="Xóa" data-toggle="tooltip"><i class='bx bx-trash user' ></i></a>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+   </div> 
+  </body>
+</html>

@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  text-decoration: none;
+}
+
+#myTable table,
+#formElement,
+form {
+  padding: 0px 0px 0px 0px !important;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  cursor: pointer;
+  *cursor: hand;
+}
+#myTable,
+#formElement {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  padding: 0px !important;
+}
+
+#myTable th,
+#myTable td {
+  text-align: left;
+  padding: 10px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+}
+thead tr th {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 600;
+  background: #006bcf;
+  text-align: center !important;
+}
+tbody tr td {
+  text-align: left;
+  color: black;
+  font-weight: 600;
+}
+/* icon */
+.nv {
+  background: rgb(20, 97, 197);
+  border: 1px solid rgb(255, 255, 255);
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.nv:hover,
+.nv:active {
+  background: white;
+  border: 1px solid black;
+  color: black;
+}
+/* Search*/
+
+.bx-search {
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 15px;
+}
+
+#search {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 14px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 20px;
+}
+/* Form */
+#formElement input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#formElement input[type="button"] {
+  width: 20%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#formElement input[type="button"]:hover {
+  background-color: #45a049;
+}
+
+#formElement {
+  margin-top: 50px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
